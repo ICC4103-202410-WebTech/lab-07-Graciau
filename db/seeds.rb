@@ -39,20 +39,20 @@ User.create!(
     password: '123456789'
 )
 
-Tag.create!(
+tag1= Tag.create!(
     name: "Tag1"
 )
 
-Tag.create!(
+tag2 = Tag.create!(
     name: "Tag2"
 )
 
-Tag.create!(
+tag3= Tag.create!(
     name: "Tag3"
 )
 
 
-Post.create!(
+post1= Post.create!(
     user_id: 1,
     title: "Post 1",
     content: "Content 1",
@@ -62,7 +62,7 @@ Post.create!(
 )
 
 
-Post.create!(
+post2= Post.create!(
     user_id: 2,
     title: "Post 2",
     content: "Content 2",
@@ -73,7 +73,7 @@ Post.create!(
 
 
 
-Post.create!(
+post3= Post.create!(
     user_id: 3,
     title: "Post 3",
     content: "Content 3",
@@ -83,7 +83,7 @@ Post.create!(
 )
 
 
-Post.create!(
+post4= Post.create!(
     user_id: 4,
     title: "Post 4",
     content: "Content 4",
@@ -93,7 +93,7 @@ Post.create!(
 )
 
 
-Post.create!(
+post5= Post.create!(
     user_id: 5,
     title: "Post 5",
     content: "Content 5",
@@ -103,3 +103,8 @@ Post.create!(
 )
 
 
+post1.tags << tag1
+post2.tags << tag2
+post3.tags << tag3
+post4.tags << tag1
+post5.tags << tag2
